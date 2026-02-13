@@ -1,15 +1,147 @@
 @import "tailwindcss";
-@keyframes fadeUp {
+
+.cinema-title {
+  letter-spacing: -0.05em;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+/* glow text */
+.glow-text {
+  text-shadow:
+    0 0 20px rgba(255, 255, 255, 0.35),
+    0 0 60px rgba(255, 255, 255, 0.25);
+}
+
+@keyframes logoLoop {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes logoLoop {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-logoLoopFast {
+  animation: logoLoop 20s linear infinite;
+}
+
+@keyframes wordFadeUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(24px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-.animate-fadeUp {
-  animation: fadeUp 0.6s ease forwards;
+@keyframes wordFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+    filter: blur(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.animate-word {
+  animation: wordFadeUp 2.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+
+.animate-word {
+  animation: wordFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+body {
+  cursor: url("https://www.rw-designer.com/cursor-extern.php?id=192075"), auto;
+}
+
+
+@layer utilities {
+  /* Infinite Marquee Animation */
+  .animate-marquee {
+    display: flex;
+    animation: marquee 30s linear infinite;
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* Smooth Scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Scrollbar-ыг нуух (хэрэв хэрэгтэй бол) */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Noise texture effect */
+.noise-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/noise.png'); /* noise.png файл public фолдерт байх ёстой */
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+
+
+@layer utilities {
+  /* 1. Анимацийн Keyframes тодорхойлох */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* 2. Анимацийн класс үүсгэх */
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
 }

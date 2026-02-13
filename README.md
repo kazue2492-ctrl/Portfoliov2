@@ -1,18 +1,38 @@
-# React + Vite
+🎨 Personal Portfolio Website
+Энэхүү төсөл нь миний хийж гүйцэтгэсэн ажлууд, ур чадвар болон туршлагыг харуулах зорилготой орчин үеийн, минимал загвартай портфолио вэбсайт юм.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🛠 Ашигласан технологиуд
+Вэбсайтыг хамгийн сүүлийн үеийн технологиуд ашиглан хурдан бөгөөд хүртээмжтэй байхаар шийдсэн:
 
-Currently, two official plugins are available:
+Framework: React.js
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Styling: Tailwind CSS (Utility-first CSS)
 
-## React Compiler
+Icons: React Icons
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+Animation: Framer Motion (Сонголтоор)
 
-Note: This will impact Vite dev & build performances.
+Deployment: [Vercel / Netlify / GitHub Pages]
 
-## Expanding the ESLint configuration
+🚀 Ажиллуулах заавар
+Өөрийн локал орчинд ажиллуулахдаа дараах алхмуудыг гүйцэтгэнэ үү:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Төслийг клоноор татах:
+
+Bash
+git clone https://github.com/таны-хэрэглэгчийн-нэр/portfolio.git
+cd portfolio
+Сангуудыг суулгах:
+
+Bash
+npm install
+Хөгжүүлэлтийн горимд ажиллуулах:
+
+Bash
+npm run dev
+Вэб хөтөч дээр http://localhost:5173 (эсвэл 3000) хаягаар нээгдэнэ.
+
+Продакшн хувилбарыг бэлтгэх:
+
+Bash
+npm run build

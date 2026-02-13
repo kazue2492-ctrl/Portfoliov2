@@ -1,13 +1,17 @@
-import React from "react";
-import Navbar from "./components/navbar";
+import { useState } from "react";
+import SplashScreen from "./components/SplashScreen";
 import Home from "./pages/Home";
-import LightRays from "./effects/LightRays";
 
 export default function App() {
+  const [showSplash, setShowSplash] = useState(true);
+
   return (
     <>
-      <Navbar />
-      <Home />
+      {showSplash ? (
+        <SplashScreen onFinish={() => setShowSplash(false)} />
+      ) : (
+        <Home />
+      )}
     </>
   );
 }
